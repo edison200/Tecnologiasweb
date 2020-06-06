@@ -1,9 +1,11 @@
 <?php
 
-    $conexion=mysqli_connect('localhost','root','','formulario_prueba') or die ('Error en la base de datos');
+    $conexion=mysqli_connect('localhost','root','','farmacia') or die ('Error en la base de datos');
 
-    $sql="INSERT INTO medicamneto VALUES(null,'".$_POST["nombre"]."','".$_POST["apellido"]."','".$_POST["correo"]."','".$_POST["pass"]."','".$_POST["genero"]."')";
+    $sql="INSERT INTO usuarios VALUES(null,'".$_POST["correo"]."','".$_POST["contraseña"]."')";
 
     $resultado=mysqli_query($conexion,$sql) or die ('Error en el query');
 
     mysqli_close($conexion);
+    echo 'Error';
+?>  

@@ -17,7 +17,7 @@
     <!--Fontawesome CDN-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script src="../js/scriptVentana.js"></script>
+   <script src="../js/scriptVentana.js"></script>
     <!--Custom styles-->
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="../css/login.css">
@@ -26,7 +26,7 @@
 <body>
     <div class="ventana" id="vent">
         <div id="cerrar"><a href="javascript:cerrarFormulario()"><img src="../Imagenes/salida.png" width="20"></a> </div>
-        <form>
+        <form >
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Correo Electronico</label>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <input type="password" class="form-control" id="inputPassword4" >
                 </div>
             </div>
             <div class="form-group">
@@ -70,7 +70,7 @@
                     </label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Sign in</button>
+            <button type="submit" class="btn btn-primary" name="enviar">Sign in</button>
         </form>
     </div>
     <div class="container">
@@ -86,19 +86,19 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="../js/tabla.php" method="POST">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Usuario">
+                            <input type="text" class="form-control" placeholder="Usuario"  name="correo">
 
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Contraseña">
+                            <input type="password" class="form-control" placeholder="Contraseña" name="contraseña">
                         </div>
                         <!-- <div class="row align-items-center remember">
                             <input type="checkbox">Remember Me
