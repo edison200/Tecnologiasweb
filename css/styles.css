@@ -10,6 +10,10 @@
  * Copyright 2011-2020 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+ #medicamentos{
+   margin-bottom: 60px;
+ }
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -208,6 +212,7 @@ svg {
 
 table {
   border-collapse: collapse;
+  background-color: beige;
 }
 
 caption {
