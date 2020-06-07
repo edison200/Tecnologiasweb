@@ -11,7 +11,7 @@ $resultado = mysqli_query($conexion, $validar);
 $filas=mysqli_num_rows($resultado);
 
 if($filas>0){
-	header("location:pedidos.html");
+	header("location:inicio.html");
 }else{
 	echo "Error de autentificacion";
 }
