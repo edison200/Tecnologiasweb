@@ -1,5 +1,5 @@
 <?php
-$conexion = mysqli_connect("localhost", "root", "", "desarrolo_web");
+$conexion = mysqli_connect("localhost", "root", "", "tecnologias_web");
 
 if (!$conexion) {
 

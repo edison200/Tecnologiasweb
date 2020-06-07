@@ -8,12 +8,12 @@ $validar = "SELECT * FROM registro_usuarios WHERE correo = '".$correo."' AND con
 $resultado = mysqli_query($conexion, $validar);
 
 
-if(!$resultado){
-	echo "Usuario Valido";
+$filas=mysqli_num_rows($resultado);
 
+if($filas>0){
+	header("location:pedidos.html");
 }else{
-
-	echo "\n Usuario Invalido";
+	echo "Error de autentificacion";
 }
-
+mysqli_free_result($resultado);
 mysqli_close($conexion);
