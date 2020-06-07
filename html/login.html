@@ -26,43 +26,38 @@
 <body>
     <div class="ventana" id="vent">
         <div id="cerrar"><a href="javascript:cerrarFormulario()"><img src="../Imagenes/salida.png" width="20"></a> </div>
-        <!-- Registrar -->
-        
-        <!-- Comentar por favor  -->
-        <form>
+       
+        <form action="control.php" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Correo Electronico</label>
-                    <input type="email" class="form-control" id="inputEmail4">
+                    <input type="email" class="form-control" id="inputEmail4" name="correo">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="inputPassword4">Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4">
+                    <input type="password" class="form-control" id="inputPassword4" name="contraseña">
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputAddress">Dirección Calle Principal</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                <label for="inputAddress">Calle Principal</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="direccion1">
             </div>
             <div class="form-group">
-                <label for="inputAddress2">Address 2</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                <label for="inputAddress2">Calle Secundaria</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="direccion2">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="inputCity">City</label>
-                    <input type="text" class="form-control" id="inputCity">
+                    <label for="inputCity">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCity" name="ciudad">
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputState">State</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Provincia</label>
+                    <input type="text" class="form-control" id="inputCity" name="provincia">
                 </div>
                 <div class="form-group col-md-2">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip">
+                    <label for="inputZip">Cod_Postal</label>
+                    <input type="text" class="form-control" id="inputZip"  name="cod_postal">
                 </div>
             </div>
             <div class="form-group">
@@ -75,7 +70,9 @@
             </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
         </form>
-        <!-- login -->
+
+        <!-- LOGIN-->
+
     </div>
     <div class="container">
         <div class="d-flex justify-content-center h-100">
@@ -90,19 +87,19 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form action="validacion.php" method="POST">
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="Usuario">
+                            <input type="text" class="form-control" placeholder="Correo" name="correo">
 
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Contraseña">
+                            <input type="password" class="form-control" placeholder="Contraseña" name="contraseña">
                         </div>
                         <!-- <div class="row align-items-center remember">
                             <input type="checkbox">Remember Me
