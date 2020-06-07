@@ -1885,11 +1885,11 @@ pre code {
 .table-dark td,
 .table-dark thead th,
 .table-dark tbody + tbody {
-  border-color: #95999c;
+  border-color: #bad9f0;
 }
 
 .table-hover .table-dark:hover {
-  background-color: #b9bbbe;
+  background-color: #98acc9;
 }
 .table-hover .table-dark:hover > td,
 .table-hover .table-dark:hover > th {
