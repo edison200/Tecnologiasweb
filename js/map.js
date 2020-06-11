@@ -1,13 +1,13 @@
 let myMap = L.map('myMap').setView([51.505, -0.09], 13)
 
-L.tileLayer(`https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png`, {
+L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 }).addTo(myMap);
 
 let marker = L.marker([51.5, -0.09]).addTo(myMap)
 
 let iconMarker = L.icon({
-    iconUrl: 'marker.png',
+    iconUrl: '../Imagenes/marker.png',
     iconSize: [60, 60],
     iconAnchor: [30, 60]
 })
