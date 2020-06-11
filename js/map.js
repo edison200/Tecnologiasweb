@@ -1,10 +1,10 @@
-let myMap = L.map('myMap').setView([51.505, -0.09], 13)
+let myMap = L.map('myMap').setView([-1.2490800, -78.6167500], 13)
 
 L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
 	maxZoom: 18,
 }).addTo(myMap);
 
-let marker = L.marker([51.5, -0.09]).addTo(myMap)
+let marker = L.marker([-1.2490800, -78.6167500]).addTo(myMap)
 
 let iconMarker = L.icon({
     iconUrl: '../Imagenes/marker.png',
@@ -12,7 +12,7 @@ let iconMarker = L.icon({
     iconAnchor: [30, 60]
 })
 
-let marker2 = L.marker([51.51, -0.09], { icon: iconMarker }).addTo(myMap)
+let marker2 = L.marker([-1.2490800, -78.6167500], { icon: iconMarker }).addTo(myMap)
 
 myMap.doubleClickZoom.disable()
 myMap.on('dblclick', e => {
