@@ -21,6 +21,7 @@ var producto = function(id,nombre,cantidad,subtotal){
     }
 
     const consulta = await getData("../PHP/prueba.php");
+    const consulta2 = await getData("../PHP/validar.php");
     var select = document.getElementById("Medica");
     for (var i = 0; i < consulta.length; i++) {
       var nuevo = document.createElement("option");
