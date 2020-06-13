@@ -36,7 +36,6 @@ map.on('dblclick', function (e) {
     var longitud =direccion.lng;
     document.getElementById("lat").innerText = latitud;
     document.getElementById("lon").innerText = longitud;
-    var latitud=document.getElementById("lon").innerText;
     
 });
 
