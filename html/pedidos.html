@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -20,6 +21,9 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet" />
     <script src="../js/consulta.js"></script>
+
+    <link data-require="leaflet@0.7.3" data-semver="0.7.3" rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
 </head>
 
 <body id="page-top">
@@ -42,45 +46,68 @@
     <!-- Pedidos-->
     <header class="masthead">
         <div class="container h-100">
-                <div class="form-group">
-                    <table class="table">
-                        <select id="Medica" class="form-control">
-                        </select>
-                        <section>
-                            <label style="color: white; margin-bottom: 20px;">Cantidad: <input type="number" name="cantidad" id="canti"></label>
-                        </section>
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">#Producto</th>
-                                <th scope="col">Descripcion</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">Subtotal</th>
-                            </tr>
-                        </thead>
-                        <tbody class="Producto" id="prod">
-                             <!-- un tr para cada producto-->
-                        </tbody>
-                    </table>
-                    <!-- Total-->
-                    <div class="input-group mb-3, total" style="width: 200px;float: right;">
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label style="text-align: center;padding-right: 30px;color: white;">Total:</label>
-                                <span class="input-group-text" >$</span>
-                            </div>
-                            <span class="input-group-text" id="total" name="Total" ></span>
+            <div class="form-group">
+                <table class="table">
+                    <select id="Medica" class="form-control">
+                    </select>
+                    <section>
+                        <label style="color: white; margin-bottom: 20px;">Cantidad: <input type="number" name="cantidad"
+                                id="canti"></label>
+                    </section>
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#Producto</th>
+                            <th scope="col">Descripcion</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody class="Producto" id="prod">
+                        <!-- un tr para cada producto-->
+                    </tbody>
+                </table>
+                <!-- Total-->
+                <div class="input-group mb-3, total" style="width: 200px;float: right;">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label style="text-align: center;padding-right: 30px;color: white;">Total:</label>
+                            <span class="input-group-text">$</span>
                         </div>
+                        <span class="input-group-text" id="total" name="Total"></span>
                     </div>
-                <button class="btn btn-primary" id="comparar">Comparar</button>
                 </div>
+                <button class="btn btn-primary" id="comparar">Comparar</button>
+            </div>
+            <div id="destino">
+                <div id="mapas">
+                    <div id="map" style="height: 300px"></div>
+                    <!--Custom map-->
+                    <script data-require="leaflet@0.7.3" data-semver="0.7.3"
+                        src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+                    <script src="../js/map.js"></script>
+                </div>
+                <div id="datosusuarios">
+                    <div>
+                        <label for="Nombre">Nombre</label>
+                        <span class="input-group-text" id="Nombre"></span>
+                    </div>
+                    <div>
+                        <label for="Apellido">Apellido</label>
+                        <span class="input-group-text" id="Apellido"></span>
+                    </div>
+                    <label for="Direccion">Direccion</label>
+                    <div>
+                        <label for="Latitud">Latitud</label>
+                        <span class="input-group-text" id="Latitud"></span>
+                    </div>
+                    <div>
+                        <label for="Longitud">Longitud</label>
+                        <span class="input-group-text" id="Longitud"></span>
+                    </div>
+                </div>
+            </div>
     </header>
     <!-- Pedidos-->
-    <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - Start Bootstrap</div>
-        </div>
-    </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
