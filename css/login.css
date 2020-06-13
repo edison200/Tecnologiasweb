@@ -116,7 +116,6 @@ input:focus {
 .ventana2{
     background-color: #f4623a;
     width: 40%;
-    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
@@ -128,6 +127,8 @@ input:focus {
     z-index: 10;
     top: 5%;
     display: none;
+    color: black;
+    height: 90%;
 }
 #cerrar{
     position: absolute;

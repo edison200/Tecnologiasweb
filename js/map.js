@@ -1,41 +1,42 @@
-let myMap = L.map('myMap').setView([-1.2490800, -78.6167500], 13)
+// var map = L.map('map').setView([-1.2490800, -78.6167500], 15);
 
-L.tileLayer('https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', {
-	maxZoom: 18,
-}).addTo(myMap);
+var tileLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    'attribution': 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+});
 
-let marker = L.marker([-1.2490800, -78.6167500]).addTo(myMap)
+var map = new L.Map('map', {
+    'center': [-1.2490800, -78.6167500],
+    'zoom': 13,
+    'layers': [tileLayer]
+});
+
 
 let iconMarker = L.icon({
     iconUrl: '../Imagenes/marker.png',
     iconSize: [60, 60],
     iconAnchor: [30, 60]
-})
+});
 
-let marker2 = L.marker([-1.2490800, -78.6167500], { icon: iconMarker }).addTo(myMap)
+L.control.scale().addTo(map);
+L.marker([-1.2490800, -78.6167500]).addTo(map).bindPopup('<h3>CIUDAD AMBATO</<h3>');
 
-myMap.doubleClickZoom.disable()
-myMap.on('dblclick', e => {
-  let latLng = myMap.mouseEventToLatLng(e.originalEvent);
+map.doubleClickZoom.disable();
+var marker;
+var popup = L.popup();
+var direccion="";
+map.on('dblclick', function (e) {
+    if (marker) {
+        map.removeLayer(marker);
+    }
+    direccion=e.latlng;
+    // alert(direccion.lat.toString());
+    marker = new L.Marker(e.latlng, { icon: iconMarker }).addTo(map)
+    .bindPopup('<h3>Destino de Envio</h3>'+'<br> latitud: '+direccion.lat.toString()+'<br> longitud: '+direccion.lng.toString());
+    var latitud =direccion.lat;
+    var longitud =direccion.lng;
+    document.getElementById('latitud').value=3;
+    document.getElementById('longitud').value=4;
+    
+});
 
-  L.marker([latLng.lat, latLng.lng], { icon: iconMarker }).addTo(myMap)
-})
 
-navigator.geolocation.getCurrentPosition(
-  (pos) => {
-    const { coords } = pos
-    const { latitude, longitude } = coords
-    L.marker([latitude, longitude], { icon: iconMarker }).addTo(myMap)
-
-    setTimeout(() => {
-      myMap.panTo(new L.LatLng(latitude, longitude))
-    }, 5000)
-  },
-  (error) => {
-    console.log(error)
-  },
-  {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-  })
