@@ -58,7 +58,7 @@ var producto = function(id,nombre,cantidad,subtotal){
     if(produc != ""){
         var fila="<tr><td>"+produc.id+"</td><td>"+produc.nombre+"</td><td>"+produc.cantidad+"</td><td>"+produc.subtotal+"</td></tr>";
         $('#prod').append(fila);
-        document.getElementById("total").value = total;
+        document.getElementById("total").innerText = total;
         }
     }
     button = document.getElementById('comparar'); 
