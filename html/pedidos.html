@@ -19,6 +19,7 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet" />
+    <script src="../js/consulta.js"></script>
 </head>
 
 <body id="page-top">
@@ -41,20 +42,12 @@
     <!-- Pedidos-->
     <header class="masthead">
         <div class="container h-100">
-            <form>
                 <div class="form-group">
                     <table class="table">
-                        <select id="medicamentos" class="form-control">
-                            <option>Medicamento 1</option>
-                            <option>Medicamento 2</option>
-                            <option>Medicamento 3</option>
-                            <option>Medicamento 4</option>
-                            <option>Medicamento 5</option>
-                            <option>Medicamento 6</option>
-                            <option>Medicamento 7</option>
+                        <select id="Medica" class="form-control">
                         </select>
                         <section>
-                            <label style="color: white; margin-bottom: 20px;">Cantidad: <input type="number" name="cantidad"></label>
+                            <label style="color: white; margin-bottom: 20px;">Cantidad: <input type="number" name="cantidad" id="canti"></label>
                         </section>
                         <thead class="thead-dark">
                             <tr>
@@ -64,26 +57,8 @@
                                 <th scope="col">Subtotal</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="Producto" id="prod">
                              <!-- un tr para cada producto-->
-                            <tr>
-                                <th scope="row"></th>
-                                <td> </td>
-                                <td> </td>
-                                <td> </td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row"></th>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                            </tr>
                         </tbody>
                     </table>
                     <!-- Total-->
@@ -91,14 +66,13 @@
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <label style="text-align: center;padding-right: 30px;color: white;">Total:</label>
-                                <span class="input-group-text">$</span>
+                                <span class="input-group-text" id="total">$</span>
                             </div>
-                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)"  >
                         </div>
                     </div>
-                <button type="submit" class="btn btn-primary">Comparar</button>
+                <button class="btn btn-primary" id="comparar">Comparar</button>
                 </div>
-            </form>
     </header>
     <!-- Pedidos-->
     <!-- Footer-->
@@ -114,7 +88,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
 </body>
 
 </html>

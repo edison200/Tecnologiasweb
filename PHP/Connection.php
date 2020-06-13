@@ -2,8 +2,8 @@
 $host="localhost";
 $user="root";
 $pass="";
-$db="farmaciaamiga";
+$db="farmacia";
 
-$connection=mysqli_connect($host,$user,$pass,$db);
+$connection=mysqli_connect($host,$user,$pass,$db) or die ("Error la conexion servidor");
 mysqli_set_charset($connection,"utf8");
 ?>
