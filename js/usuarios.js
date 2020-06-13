@@ -20,7 +20,7 @@ usuarios.prototype.addusuarios = function () {
             apellido: this.apellido,
             correo: this.correo,
             contraseña: this.contraseña,
-            latitud:this.longitud,
+            latitud:this.latitud,
             longitud:this.longitud
         },
         success: function (respuesta) {
