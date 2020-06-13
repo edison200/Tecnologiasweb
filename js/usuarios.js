@@ -28,5 +28,5 @@ usuarios.prototype.addusuarios = function () {
                 alert("Usuario Registrado");
             }
         }
-    });0
+    });
 }
