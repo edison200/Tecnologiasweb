@@ -9,7 +9,7 @@ $longitud=$_POST["longitud"];
 
 require("Connection.php");
 
-$sql="INSERT INTO usuarios(nombre,apellido,correo,contraseña) VALUES ('$nombre','$apellido','$correo','$contraseña','$latitud','$longitud')";
+$sql="INSERT INTO usuarios(nombre,apellido,correo,contraseña,latitud,longitud) VALUES ('$nombre','$apellido','$correo','$contraseña','$latitud','$longitud')";
 mysqli_query($connection,$sql);
 echo 1;
 ?>

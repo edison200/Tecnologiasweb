@@ -4,8 +4,8 @@ var optenerDatos = function () {
     var apellido = document.getElementById("apellido").value;
     var correo = document.getElementById("correo").value;
     var contraseña = document.getElementById("contraseña").value;
-    var latitud = document.getElementById("lat").value;
-    var longitud = document.getElementById("lon").value;
+    var latitud = document.getElementById("latitud").innerHTML;
+    var longitud = document.getElementById("longitud").innerHTML;
 
     if (nombre == "") {
         document.getElementById("nombre").focus();
@@ -26,8 +26,6 @@ var optenerDatos = function () {
                     document.getElementById("apellido").value = "";
                     document.getElementById("correo").value = "";
                     document.getElementById("contraseña").value = "";
-                    document.getElementById("latitud").value = "";
-                    document.getElementById("longitud").value = "";
                 }
             }
         }

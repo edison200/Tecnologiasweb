@@ -34,9 +34,8 @@ map.on('dblclick', function (e) {
     .bindPopup('<h3>Destino de Envio</h3>'+'<br> latitud: '+direccion.lat.toString()+'<br> longitud: '+direccion.lng.toString());
     var latitud =direccion.lat;
     var longitud =direccion.lng;
-    document.getElementById("lat").innerText = latitud;
-    document.getElementById("lon").innerText = longitud;
-    var latituddocument.getElementById("lon").innerText
+    document.getElementById("latitud").innerText = latitud;
+    document.getElementById("longitud").innerText = longitud;
     
 });
 
