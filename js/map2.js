@@ -1,23 +1,41 @@
-// var map = L.map('map').setView([-1.2490800, -78.6167500], 15);
+  // var map = L.map('map').setView([-1.2490800, -78.6167500], 15);
+  async function mapa(){
 
-var tileLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    'attribution': 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
-});
+    async function getData(url) {
 
-var map = new L.Map('map', {
-    'center': [-1.2490800, -78.6167500],
-    'zoom': 13,
-    'layers': [tileLayer]
-});
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    const consulta4 = await getData("../PHP/datos.php");
+    
+    var tileLayer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        'attribution': 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+    });
 
-
-let iconMarker = L.icon({
-    iconUrl: '../Imagenes/marker.png',
-    iconSize: [60, 60],
-    iconAnchor: [30, 60]
-});
-L.control.scale().addTo(map);
-L.marker([longitud, latitud]).addTo(map).bindPopup('<h3>CIUDAD AMBATO</<h3>');
-
+    var map = new L.Map('map', {
+        'center': [-1.2490800, -78.6167500],
+        'zoom': 13,
+        'layers': [tileLayer]
+    });
 
 
+    let iconMarker = L.icon({
+        iconUrl: '../Imagenes/marker.png',
+        iconSize: [60, 60],
+        iconAnchor: [30, 60]
+    });
+    
+    L.control.scale().addTo(map);
+    L.marker([consulta4[0].latitud, consulta4[0].longitud]).addTo(map).bindPopup('<h3>DESTINO DE ENVIO</<h3>');
+
+
+}
+mapa();
+
+
+
+
+
+
+      

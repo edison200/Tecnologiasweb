@@ -20,7 +20,7 @@
         rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="../css/styles.css" rel="stylesheet" />
-    <script src="../js/consulta.js"></script>
+   
  
 
     <link data-require="leaflet@0.7.3" data-semver="0.7.3" rel="stylesheet"
@@ -80,13 +80,7 @@
                 <button class="btn btn-primary" id="comparar">Comparar</button>
             </div>
             <div id="destino">
-                <div id="mapas">
-                    <div id="map" style="height: 300px"></div>
-                    <!--Custom map-->
-                    <script data-require="leaflet@0.7.3" data-semver="0.7.3"
-                        src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
-                    <script src="../js/map2.js"></script>
-                </div>
+              
                 <div id="datosusuarios">
                     <div>
                         <label for="Nombre">Nombre</label>
@@ -108,9 +102,19 @@
                           <span class="input-group-text" id="longitud" name="longitud"></span>
                         </div>
                       </div>
+                      
+                </div>
+                <script src="../js/consulta.js"></script>
+                <div id="mapas">
+                    <div id="map" style="height: 300px"></div>
+                    <!--Custom map-->
+                    <script data-require="leaflet@0.7.3" data-semver="0.7.3"
+                        src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+                    <script src="../js/map2.js"></script>
                 </div>
             </div>
     </header>
+    
     <!-- Pedidos-->
     <!-- Bootstrap core JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

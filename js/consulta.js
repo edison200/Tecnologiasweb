@@ -43,7 +43,7 @@ var producto = function(id,nombre,cantidad,subtotal){
                 if(produc != ""){
                cant = item.Precio;
                result = canti * cant;
-               produc = producto(item.id,item.Nombre,cant,result)
+               produc = producto(item.id,item.Nombre,canti,result)
                Vmedicamentos.push(produc);
             }
             }
