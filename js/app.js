@@ -19,13 +19,21 @@ var optenerDatos = function () {
                 if (contraseña == "") {
                     document.getElementById("contraseña").focus();
                 } else {
-                    var user = new usuarios(nombre, apellido, correo, contraseña,latitud,longitud, "../PHP/insertar.php");
-                    
-                    user.addusuarios();
-                    document.getElementById("nombre").value = "";
-                    document.getElementById("apellido").value = "";
-                    document.getElementById("correo").value = "";
-                    document.getElementById("contraseña").value = "";
+                    if (latitud == "") {
+                        document.getElementById("latitud").focus();
+                    } else {
+                        if (longitud == "") {
+                            document.getElementById("longitud").focus();
+                        } else {
+                            var user = new usuarios(nombre, apellido, correo, contraseña, latitud, longitud, "../PHP/insertar.php");
+
+                            user.addusuarios();
+                            document.getElementById("nombre").value = "";
+                            document.getElementById("apellido").value = "";
+                            document.getElementById("correo").value = "";
+                            document.getElementById("contraseña").value = "";
+                        }
+                    }
                 }
             }
         }
