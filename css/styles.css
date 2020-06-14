@@ -32,7 +32,6 @@
 #destino {
   margin-top: 50px;
 }
-<<<<<<< HEAD
 
 #Nombre {
   height: 43px;
@@ -53,6 +52,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   text-align: center;
+  width: 210px;
 }
 
 #longitud {
@@ -60,10 +60,9 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   text-align: center;
+  width: 220px;
 }
 
-=======
->>>>>>> f32d75c8d2c9af6a245841271bd5218bd96e2e19
 html {
   font-family: sans-serif;
   line-height: 1.15;
