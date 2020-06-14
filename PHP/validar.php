@@ -14,7 +14,7 @@ $data = array();
     }
     header("location:/tecnologias%20web/html/inicio.html");
     }else{
-		alert("Error de autentificacion");
+    header("location:/tecnologias%20web/html/login.html");
     }
  
 	echo json_encode($data);
