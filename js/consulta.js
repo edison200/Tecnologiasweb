@@ -20,7 +20,7 @@ var producto = function(id,nombre,cantidad,subtotal){
         return data;
     }
     const consulta = await getData("../PHP/prueba.php");
-    
+    const consulta2 = await getData("../PHP/validar.php");
     var select = document.getElementById("Medica");
     document.getElementById("Nombre").innerText = consulta2.nombre;
     document.getElementById("Apellido").innerText = consulta2.apellido;
