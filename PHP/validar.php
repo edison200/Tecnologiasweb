@@ -9,13 +9,13 @@ $resultado = mysqli_query($connection, $validar);
 
 $data = array();
     if($resultado->num_rows >0){
-        while($row = $result->fetch_assoc()){ //tuplas
+        while($row = $resultado->fetch_assoc()){ //tuplas
             $data[] = $row;
-		}
-		header("location:/tecnologias%20web/html/pedidos.html");
+    }
+    header("location:/tecnologias%20web/html/inicio.html");
     }else{
-
-		header ("location:/tecnologias%20web/html/login.html");
-	}
+		alert("Error de autentificacion");
+    }
+ 
 	echo json_encode($data);
     ?>

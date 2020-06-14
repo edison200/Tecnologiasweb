@@ -9,7 +9,13 @@ $longitud=$_POST["longitud"];
 
 require("Connection.php");
 
-$sql="INSERT INTO usuarios(nombre,apellido,correo,contraseña,latitud,longitud) VALUES ('$nombre','$apellido','$correo','$contraseña','$latitud','$longitud')";
-mysqli_query($connection,$sql);
-echo 1;
+$validar = "SELECT * FROM usuarios WHERE correo = '".$correo."'  ";
+$resultado = mysqli_query($connection, $validar);
+    if($resultado->num_rows >0){
+        echo 0;
+    }else{
+    $sql="INSERT INTO usuarios(nombre,apellido,correo,contraseña,latitud,longitud) VALUES ('$nombre','$apellido','$correo','$contraseña','$latitud','$longitud')";
+    mysqli_query($connection,$sql);
+        echo 1;
+    }
 ?>
