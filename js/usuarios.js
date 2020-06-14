@@ -25,8 +25,11 @@ usuarios.prototype.addusuarios = function () {
         },
         success: function (respuesta) {
             if (respuesta == 1) {
-                alert("Usuario Registrado");
-            }
+                alert("Usuario Registrado");  
+                location.href='/tecnologias%20web/html/inicio.html';        
+            }else if (respuesta == 0){
+                alert("Correo ya vinculado a una cuenta");
+            }           
         }
     });
 }

@@ -19,7 +19,6 @@ var producto = function(id,nombre,cantidad,subtotal){
         const data = await response.json();
         return data;
     }
-    const consulta2 = await getData("../PHP/validar.php");
     const consulta = await getData("../PHP/prueba.php");
     
     var select = document.getElementById("Medica");
