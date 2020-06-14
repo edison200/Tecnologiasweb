@@ -20,7 +20,11 @@ var producto = function(id,nombre,cantidad,subtotal){
         return data;
     }
     const consulta = await getData("../PHP/prueba.php");
-    const consulta2 = await getData("../PHP/validar.php");
+    const consulta3 = await getData("../PHP/datos.php");
+    document.getElementById("Nombre").innerText = consulta3[0].nombre;
+    document.getElementById("Apellido").innerText = consulta3[0].apellido;
+    document.getElementById("latitud").innerText = consulta3[0].latitud;
+    document.getElementById("longitud").innerText = consulta3[0].longitud;
     var select = document.getElementById("Medica");
    
     for (var i = 0; i < consulta.length; i++) {
@@ -63,6 +67,7 @@ var producto = function(id,nombre,cantidad,subtotal){
         obtenerPrecio();
     }); 
     }
+    
 }
 global();
 

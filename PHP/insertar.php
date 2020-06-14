@@ -14,6 +14,8 @@ $resultado = mysqli_query($connection, $validar);
     if($resultado->num_rows >0){
         echo 0;
     }else{
+        session_start();
+        $_SESSION['correo']=$correo;
     $sql="INSERT INTO usuarios(nombre,apellido,correo,contraseña,latitud,longitud) VALUES ('$nombre','$apellido','$correo','$contraseña','$latitud','$longitud')";
     mysqli_query($connection,$sql);
         echo 1;
