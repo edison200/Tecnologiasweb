@@ -3,8 +3,8 @@ include("Connection.php");
 
 $correo = $_POST["correo"];
 $contraseña = $_POST["contraseña"];
-
-$validar = "SELECT * FROM usuarios WHERE correo = '".$correo."' AND contraseña = '".$contraseña."' ";
+session_start();
+$validar = "SELECT Id FROM usuarios WHERE correo = '".$correo."' AND contraseña = '".$contraseña."' ";
 $resultado = mysqli_query($connection, $validar);
 
 $data = array();
@@ -12,6 +12,7 @@ $data = array();
         while($row = $resultado->fetch_assoc()){ //tuplas
             $data[] = $row;
     }
+    $_SESSION['id']=$data;
     header("location:/tecnologias%20web/html/inicio.html");
     }else{
     header("location:/tecnologias%20web/html/login.html");

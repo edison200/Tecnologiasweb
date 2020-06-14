@@ -1,10 +1,10 @@
 <?php
 
-require_once('Connection.php');
+$Id = $_POST["Id"];
+require("Connection.php");
 
-$query = "SELECT *
-FROM medicamentos WHERE correo = '".$correo."' AND contraseña = '".$contraseña."'";
-    $data = array();
+$query = "SELECT * FROM usuarios WHERE Id = '".$Id."'  ";
+$data = array();
     $result = $connection->query($query);
     if($result->num_rows >0){
         while($row = $result->fetch_assoc()){ //tuplas
