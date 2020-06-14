@@ -12,7 +12,8 @@ $data = array();
         while($row = $resultado->fetch_assoc()){ //tuplas
             $data[] = $row;
     }
-    $_SESSION['id']=$data;
+    session_start();
+    $_SESSION['correo']=$correo;
     header("location:/tecnologias%20web/html/inicio.html");
     }else{
     header("location:/tecnologias%20web/html/login.html");

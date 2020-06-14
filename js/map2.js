@@ -16,9 +16,8 @@ let iconMarker = L.icon({
     iconSize: [60, 60],
     iconAnchor: [30, 60]
 });
-
 L.control.scale().addTo(map);
-L.marker([-1.2490800, -78.6167500]).addTo(map).bindPopup('<h3>CIUDAD AMBATO</<h3>');
+L.marker([longitud, latitud]).addTo(map).bindPopup('<h3>CIUDAD AMBATO</<h3>');
 
 
 
