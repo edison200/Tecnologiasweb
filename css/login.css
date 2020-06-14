@@ -136,4 +136,10 @@ input:focus {
     top: 10px;
 }
 
+#latitud{
+    height: 43px;
+}
 
+#longitud{
+    height: 43px;
+}
